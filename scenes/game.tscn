@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd5pkg4t2sgf7"]
+
+[ext_resource type="PackedScene" uid="uid://iv52oiisanc1" path="res://scenes/plane.tscn" id="1_slr0k"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="plane" parent="." instance=ExtResource("1_slr0k")]
+position = Vector2(567, 332)
+motion_mode = 1
