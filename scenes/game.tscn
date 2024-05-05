@@ -4,6 +4,11 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="plane" parent="." instance=ExtResource("1_slr0k")]
-position = Vector2(567, 332)
+[node name="plane0" parent="." instance=ExtResource("1_slr0k")]
+position = Vector2(37, 321)
 motion_mode = 1
+
+[node name="plane1" parent="." instance=ExtResource("1_slr0k")]
+position = Vector2(1116, 325)
+motion_mode = 1
+player_id = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://iv52oiisanc1"]
+[gd_scene load_steps=7 format=3 uid="uid://iv52oiisanc1"]
 
 [ext_resource type="Texture2D" uid="uid://bd3npakrrieku" path="res://assets/sprites/Tilemap/ships_packed.png" id="1_7no5l"]
 [ext_resource type="Script" path="res://scenes/plane.gd" id="1_spebf"]
@@ -10,6 +10,10 @@ size = Vector2(24, 19)
 atlas = ExtResource("1_7no5l")
 region = Rect2(0, 32, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_oskro"]
+atlas = ExtResource("1_7no5l")
+region = Rect2(64, 32, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_mwtkc"]
 animations = [{
 "frames": [{
@@ -17,7 +21,15 @@ animations = [{
 "texture": SubResource("AtlasTexture_4dt5f")
 }],
 "loop": true,
-"name": &"default",
+"name": &"p0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oskro")
+}],
+"loop": true,
+"name": &"p1",
 "speed": 5.0
 }]
 
@@ -31,3 +43,4 @@ shape = SubResource("RectangleShape2D_dwqt8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_mwtkc")
+animation = &"p0"
