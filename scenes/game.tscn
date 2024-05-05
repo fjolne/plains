@@ -1,14 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://bd5pkg4t2sgf7"]
+[gd_scene load_steps=4 format=3 uid="uid://bd5pkg4t2sgf7"]
 
 [ext_resource type="PackedScene" uid="uid://iv52oiisanc1" path="res://scenes/plane.tscn" id="1_slr0k"]
+[ext_resource type="Script" path="res://scripts/state.gd" id="2_yl151"]
+[ext_resource type="FontFile" uid="uid://dthtuytfyv5lv" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_p3ed3"]
 
-[node name="Node2D" type="Node2D"]
+[node name="game" type="Node2D"]
 
 [node name="plane0" parent="." instance=ExtResource("1_slr0k")]
 position = Vector2(37, 321)
 motion_mode = 1
 
 [node name="plane1" parent="." instance=ExtResource("1_slr0k")]
-position = Vector2(1116, 325)
+position = Vector2(570, 317)
 motion_mode = 1
 player_id = 1
+
+[node name="state" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_yl151")
+
+[node name="score" type="Label" parent="state"]
+offset_top = 12.0
+offset_right = 1151.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("3_p3ed3")
+theme_override_font_sizes/font_size = 32
+text = "0:0
+"
+horizontal_alignment = 1

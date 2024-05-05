@@ -6,6 +6,9 @@ extends CharacterBody2D
 
 var projectile = preload("res://scenes/projectile.tscn")
 
+func hit():
+	%state.hit(player_id)
+
 func _ready():
 	$AnimatedSprite2D.animation = "p%s" % player_id
 	velocity = Vector2.RIGHT * SPEED
